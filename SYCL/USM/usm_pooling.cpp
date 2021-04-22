@@ -31,13 +31,13 @@ constexpr size_t SIZE = 2 * 1024 * 1024;
 
 void test_host(context C) {
 
-  void* ph1 = malloc_host(SIZE, C);
-  void* ph2 = malloc_host(SIZE, C);
+  void *ph1 = malloc_host(SIZE, C);
+  void *ph2 = malloc_host(SIZE, C);
   free(ph1, C);
   free(ph2, C);
-  void* ph3 = malloc_host(SIZE, C);
-  void* ph4 = malloc_host(SIZE, C);
-  void* ph5 = malloc_host(SIZE, C);
+  void *ph3 = malloc_host(SIZE, C);
+  void *ph4 = malloc_host(SIZE, C);
+  void *ph5 = malloc_host(SIZE, C);
   free(ph3, C);
   free(ph4, C);
   free(ph5, C);
@@ -45,13 +45,13 @@ void test_host(context C) {
 
 void test_device(context C, device D) {
 
-  void* ph1 = malloc_device(SIZE, D, C);
-  void* ph2 = malloc_device(SIZE, D, C);
+  void *ph1 = malloc_device(SIZE, D, C);
+  void *ph2 = malloc_device(SIZE, D, C);
   free(ph1, C);
   free(ph2, C);
-  void* ph3 = malloc_device(SIZE, D, C);
-  void* ph4 = malloc_device(SIZE, D, C);
-  void* ph5 = malloc_device(SIZE, D, C);
+  void *ph3 = malloc_device(SIZE, D, C);
+  void *ph4 = malloc_device(SIZE, D, C);
+  void *ph5 = malloc_device(SIZE, D, C);
   free(ph3, C);
   free(ph4, C);
   free(ph5, C);
@@ -59,13 +59,13 @@ void test_device(context C, device D) {
 
 void test_shared(context C, device D) {
 
-  void* ph1 = malloc_shared(SIZE, D, C);
-  void* ph2 = malloc_shared(SIZE, D, C);
+  void *ph1 = malloc_shared(SIZE, D, C);
+  void *ph2 = malloc_shared(SIZE, D, C);
   free(ph1, C);
   free(ph2, C);
-  void* ph3 = malloc_shared(SIZE, D, C);
-  void* ph4 = malloc_shared(SIZE, D, C);
-  void* ph5 = malloc_shared(SIZE, D, C);
+  void *ph3 = malloc_shared(SIZE, D, C);
+  void *ph4 = malloc_shared(SIZE, D, C);
+  void *ph5 = malloc_shared(SIZE, D, C);
   free(ph3, C);
   free(ph4, C);
   free(ph5, C);
