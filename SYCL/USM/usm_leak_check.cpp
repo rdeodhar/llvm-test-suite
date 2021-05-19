@@ -78,10 +78,10 @@ int main(int argc, char *argv[]) {
 // CHECK-USM: zeMemAllocShared = 1
 // CHECK-USM-SAME:   zeMemFree = 3
 
-// CHECK-SMALL-BUF: {{Integrated|Discrete}} GPU will use [[API:zeMemAllocHost|zeMemAllocDevice]]
+// CHECK-SMALL-BUF: GPU will use [[API:zeMemAllocHost|zeMemAllocDevice]]
 // CHECK-SMALL-BUF:   [[API]] = 1
 // CHECK-SMALL-BUF: zeMemFree = 1
 
-// CHECK-LARGE-BUF: {{Integrated|Discrete}} GPU will use [[API:zeMemAllocHost|zeMemAllocDevice]]
+// CHECK-LARGE-BUF: GPU will use [[API:zeMemAllocHost|zeMemAllocDevice]]
 // CHECK-LARGE-BUF:   [[API]] = 3
 // CHECK-LARGE-BUF: zeMemFree = 3
