@@ -17,13 +17,9 @@ void direct_usm(queue &Q) {
   auto p3 = malloc_device(1024, Q);
 }
 
-constexpr access::mode sycl_read = access::mode::read;
-constexpr access::mode sycl_write = access::mode::write;
-
 template <typename T> class K;
 
-template <typename T, size_t N>
-void sycl_buffer(queue &Q) {
+template <typename T, size_t N> void sycl_buffer(queue &Q) {
   std::array<T, N> A, B, C;
   range<1> numElems{N};
   buffer<T, 1> bufferA(A.data(), numElems);
