@@ -1,4 +1,7 @@
 // REQUIRES: level_zero
+// TODO: ZE_DEBUG=4 produces no output on Windows. Enable when fixed.
+// UNSUPPORTED: windows
+
 // RUN: %clangxx -fsycl -fsycl-targets=%sycl_triple %s -o %t.out
 
 // RUN: env ZE_DEBUG=4 %GPU_RUN_PLACEHOLDER %t.out u 2> %t1.out; cat %t1.out %GPU_CHECK_PLACEHOLDER --check-prefix CHECK-USM
