@@ -73,6 +73,7 @@ int main(int argc, char *argv[]) {
   return 0;
 }
 
+// CHECK-USM: GPU will use {{zeMemAllocHost|zeMemAllocDevice}}
 // CHECK-USM: zeMemAllocDevice = 1
 // CHECK-USM:   zeMemAllocHost = 1
 // CHECK-USM: zeMemAllocShared = 1
